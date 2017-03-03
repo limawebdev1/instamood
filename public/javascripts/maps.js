@@ -45,16 +45,12 @@ app.controller('UsersController', ['$location', '$window', '$scope', 'usersServi
                 orientationChanged();
             }, false);
 
-
-
-
             map = new Map("map", {
                 basemap: "dark-gray"
             });
             map.on("load", mapLoadedHandler);
 
             function mapLoadedHandler(maploadEvent) {
-                console.log("map loaded", maploadEvent);
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(zoomToLocation, locationError);
                     watchId = navigator.geolocation.watchPosition(showLocation, locationError);
@@ -89,10 +85,6 @@ app.controller('UsersController', ['$location', '$window', '$scope', 'usersServi
                     }]
                 };
                 var dbCoords = mapArr;
-                // console.log(dbCoords);
-                // var dbCoords = [
-                //   {lat:-105.291135,long:40.010687},{lat:-105.290878,long:40.012183},{lat:-105.278003,long:40.019463},{lat:-105.289375,long:40.019462}
-                // ]
                 dbCoords.forEach(coord => {
                     var url;
                     switch (coord.mood) {
@@ -122,7 +114,6 @@ app.controller('UsersController', ['$location', '$window', '$scope', 'usersServi
                     imgArr[4] == 's' ? imgArr.splice(4, 1) : null
 
                     var newUrl = imgArr.join('')
-                    console.log('image', newUrl);
                     var attrs = {
                         lat: coord.lat,
                         long: coord.long,

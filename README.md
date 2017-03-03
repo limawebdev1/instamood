@@ -8,7 +8,8 @@ Our current deployed version is here: http://lmk-instamood.herokuapp.com/
 ###Some Disclaimers
 A walkthrough will be provided so you can experience the app, but for the time being, here are some hoops you have to jump through to use it:
 
-1. Contact us to be added as a sandbox user on Instagram.
+1. Contact us to be added as a sandb.
+ox user on Instagram.
 2. If you wish to use the Heroku deployment, then revert back to a Chrome browser version older than 50.
 3. Otherwise, just fork and clone, and run from localhost:3000.
 
